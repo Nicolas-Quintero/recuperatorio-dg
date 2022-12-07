@@ -1,0 +1,36 @@
+<%- include ('./partials/head') -%>
+    <%- include ('./partials/navbar') -%>
+        <div class="main-pelicula-detalle">
+            <h2 class="title-detalle">Detalla de pelicula</h2>
+            <div class="main-pelicula-detalle--card">
+                <div class="main-pelicula-detalle--card__imagen">
+                    <img src="/img/no-img.png" alt="">
+                </div>
+                <div class="main-pelicula-detalle--card__info">
+                    <h2>
+                        <%= pelicula?.title%>
+                    </h2>
+                    <p>Rating:
+                        <%= pelicula?.rating%>
+                    </p>
+                    <p># de premios:
+                        <%= pelicula?.awards%>
+                    </p>
+                    <p>
+                        Fecha de realizacion:
+                        <span id="fecha-realizacion"><%= pelicula?.release_date%></span>
+                    </p>
+                    <p>
+                        Genero:
+                        <%= pelicula?.Genres.name%>
+                    </p>
+                    <% if (user?.rol === 1) { %>
+                        <div class="form-group-button">
+                            <a href="#"><button class="btn-edit"> <i class="fa-solid fa-pencil"></i> Editar</button></a>
+                            <a href="/movie-detele/<%= pelicula?.id %>"><button class="btn-delete"><i class="fa-solid fa-trash"></i> Eliminar</button></a>
+                        </div>
+                        <%}%>
+                </div>
+            </div>
+        </div>
+        <%- include ('./partials/footer') -%>

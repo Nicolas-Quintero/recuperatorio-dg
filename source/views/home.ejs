@@ -1,0 +1,26 @@
+<%- include ('./partials/head') -%>
+    <%- include ('./partials/navbar') -%>
+        <main class="main-home">
+            <h2>Listado de peliculas</h2>
+            <div class="main-home--listado-peliculas">
+                <%for(let i = 0; i < peliculas.length; i++){%>
+                    <div class="main-home--card-peliculas">
+                        <figure class="main-home--card-peliculas__imagen">
+                            <img src="/img/no-img.png" alt="">
+                        </figure>
+                        <div class="main-home--card-peliculas__info">
+                            <p>Titulo:
+                                <%= peliculas[i].title%>
+                            </p>
+                            <p>Rating:
+                                <%= peliculas[i].rating%>
+                            </p>
+                            <p class="ver-mas">
+                                <a href="movie/<%=peliculas[i].id %>">ver mas</a>
+                            </p>
+                        </div>
+                    </div>
+                    <%}%>
+            </div>
+        </main>
+        <%- include ('./partials/footer') -%>

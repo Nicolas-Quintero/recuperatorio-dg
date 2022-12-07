@@ -1,0 +1,57 @@
+.main-home {
+    width: 100%;
+    text-align: center;
+}
+
+.main-home--listado-peliculas {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.main-home--card-peliculas {
+    box-shadow: 4px 4px 4px 7px #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main-home--card-peliculas__imagen img {
+    width: 50%;
+}
+
+.ver-mas a {
+    text-decoration: underline;
+    color: #3260C2;
+}
+
+@media screen and (min-width: 768px) {
+    .main-home--listado-peliculas {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    .main-home--card-peliculas {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main-home--listado-peliculas {
+        width: 90%;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2em;
+    }
+    .main-home--card-peliculas {
+        width: 30%;
+    }
+}

@@ -1,0 +1,68 @@
+<%- include ('./partials/head') -%>
+    <%- include ('./partials/navbar') -%>
+        <main class="main-crear-pelicula">
+            <h2>Crear pelicula</h2>
+            <form action="/crear-pelicula" method="post">
+                <div class="card-crear-pelicula">
+                    <div class="form-group">
+                        <label for="title">Titulo</label>
+                        <input type="text" name="title" id="title">
+                        <% if (locals.errores && locals.errores.title) { %>
+                            <p class="feedback">
+                                <%= locals.errores.title.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating</label>
+                        <input type="number" name="rating" id="title">
+                        <% if (locals.errores && locals.errores.rating) { %>
+                            <p class="feedback">
+                                <%= locals.errores.rating.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <div class="form-group">
+                        <label for="awards">Numero de premios</label>
+                        <input type="number" name="awards" id="title">
+                        <% if (locals.errores && locals.errores.awards) { %>
+                            <p class="feedback">
+                                <%= locals.errores.awards.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <div class="form-group">
+                        <label for="release_date">Fecha de realizacion</label>
+                        <input type="date" name="release_date" id="title">
+                        <% if (locals.errores && locals.errores.release_date) { %>
+                            <p class="feedback">
+                                <%= locals.errores.release_date.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <div class="form-group">
+                        <label for="genres">Generos</label>
+                        <select name="genres" id="">
+                            <option value="">Seleccione genero</option>
+                            <option value="1">Comedia</option>
+                            <option value="2">Terror</option>
+                            <option value="3">Drama</option>
+                            <option value="4">Accion</option>
+                            <option value="5">Ciencia Ficcion</option>
+                            <option value="6">Suspenso</option>
+                            <option value="7">Animacion</option>
+                            <option value="8">Aventuras</option>
+                            <option value="9">Documental</option>
+                            <option value="10">Infantiles</option>
+                            <option value="11">Fantasia</option>
+                            <option value="12">Musical</option>
+                        </select>
+                    </div>
+                    <div class="form-group-button">
+                        <button type="submit">Crear pelicula</button>
+                        <button type="reset" class="btn-clear">Limpar formulario</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <%- include ('./partials/footer') -%>

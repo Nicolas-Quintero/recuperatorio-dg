@@ -1,0 +1,32 @@
+<main class="main-navbar">
+    <div class="main-navbar--title">
+        <h1><a href="/">Movies DG</a></h1>
+    </div>
+    <div class="main-navbar--links">
+        <ul>
+            <li><a href="/gestion-pelicula">Gestion de peliculas</a></li>
+            <% if (!user) { %>
+                <li><a href="/login">Iniciar sesion</a></li>
+                <%} else {%>
+                    <li>
+                        <li>
+                            <a href="#">
+                                <%=user?.name%>
+                            </a>
+                        </li>
+                    </li>
+                    <li>
+                        <li><a href="/logout">Cerrar sesion</a></li>
+                    </li>
+                    <%}%>
+        </ul>
+    </div>
+    <div class="main-navbar--menu-hamburger" id="menu">
+        <i class="fa-solid fa-bars" id="menu-hamburger"></i>
+        <i class="fa-solid fa-xmark" id="menu-hamburger-close"></i>
+    </div>
+</main>
+<ul id="links" class="links">
+    <li><a href="/gestion-pelicula">Gestion de peliculas</a></li>
+    <li><a href="/login">Iniciar sesion</a></li>
+</ul>

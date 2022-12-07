@@ -1,0 +1,52 @@
+.main-pelicula-detalle {
+    width: 100%;
+}
+
+.main-pelicula-detalle .title-detalle {
+    text-align: center;
+}
+
+.main-pelicula-detalle--card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 4px 4px 4px 7px #ccc;
+    border-radius: 10px;
+}
+
+.main-pelicula-detalle--card__imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-pelicula-detalle--card__imagen img {
+    width: 300px;
+}
+
+.btn-edit {
+    cursor: pointer;
+    background-color: yellow !important;
+    color: #000 !important;
+}
+
+.btn-delete {
+    cursor: pointer;
+    background-color: rgb(225, 11, 11) !important;
+    color: #fff !important;
+}
+
+@media screen and (min-width: 768px) {
+    .main-pelicula-detalle--card {
+        margin-top: 80px;
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .main-pelicula-detalle--card__imagen {
+        width: 30%;
+    }
+    .main-pelicula-detalle--card__info {
+        width: 50%;
+    }
+}

@@ -1,0 +1,90 @@
+.main-crear-pelicula {
+    width: 100%;
+}
+
+.main-crear-pelicula h2 {
+    text-align: center;
+}
+
+.card-crear-pelicula {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #3260C2;
+}
+
+.form-group-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form-group-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.form-group-button button {
+    text-decoration: none;
+    background-color: #3260C2;
+    height: 30px;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #3260C2;
+}
+
+.btn-clear {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.feedback {
+    color: red;
+}
+
+@media screen and (min-width: 768px) {
+    .card-crear-pelicula {
+        width: 60%;
+    }
+    .form-group-button {
+        display: flex;
+        flex-direction: row;
+    }
+    .form-group-button button {
+        width: 50%;
+    }
+    .form-group-button a {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card-crear-pelicula {
+        width: 40%;
+    }
+    .form-group-button {
+        display: flex;
+        flex-direction: row;
+    }
+    .form-group-button button {
+        width: 50%;
+    }
+    .form-group-button a {
+        width: 50%;
+    }
+}
